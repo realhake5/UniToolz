@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="UniToolz is a curated library of software, games, media, and useful online tools." />
+    <meta name="theme-color" content="#050508" />
+    <title>UniToolz — Curated Tools, Software & Media</title>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+  </head>
+  <body>
+    <div class="space" aria-hidden="true"><div class="stars" id="star-container"></div><div class="cursor-glow" id="cursor-glow"></div></div>
+
+    <main class="container">
+      <header class="hero">
+        <p class="eyebrow"><i class="fa-solid fa-sparkles"></i> Curated by Valtaris</p>
+        <h1>Uni<span>Toolz</span></h1>
+        <p class="hero-copy">A central library for useful software, media, games, and the web’s hidden gems.</p>
+        <p class="byline">Created by Hake · Updated whenever new finds are worth sharing.</p>
+      </header>
+
+      <section class="library-section" aria-labelledby="library-heading">
+        <div class="section-heading">
+          <div><p class="section-kicker">Explore the collection</p><h2 id="library-heading">Find your next tool</h2></div>
+          <p class="result-count" id="result-count" aria-live="polite"></p>
+        </div>
+
+        <div class="controls">
+          <label class="search" for="search-box">
+            <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+            <span class="sr-only">Search the library</span>
+            <input id="search-box" type="search" placeholder="Search tools, platforms, or categories…" autocomplete="off" />
+            <button class="clear-search" id="clear-search" type="button" aria-label="Clear search" hidden><i class="fa-solid fa-xmark"></i></button>
+          </label>
+          <nav class="categories" id="category-container" aria-label="Filter by category"></nav>
+        </div>
+
+        <div class="active-filter" id="active-filter" hidden>
+          <span id="filter-label"></span><button id="reset-filters" type="button">Reset filters</button>
+        </div>
+        <div class="library-grid" id="library-grid" aria-live="polite"></div>
+      </section>
+
+      <section class="site-note" aria-label="About UniToolz">
+        <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+        <p>UniToolz links to independent external websites. Always review a site before downloading or sharing personal information.</p>
+      </section>
+    </main>
+
+    <div class="updates" id="updates">
+      <button class="updates-trigger" id="updates-trigger" type="button" aria-expanded="false" aria-controls="updates-panel" aria-label="Open update log" title="Update log">
+        <i class="fa-regular fa-bell" aria-hidden="true"></i>
+        <span class="updates-badge" id="updates-badge" aria-hidden="true"></span>
+      </button>
+      <section class="updates-panel" id="updates-panel" aria-labelledby="updates-title" hidden>
+        <div class="updates-header">
+          <div>
+            <p class="panel-kicker">What's new</p>
+            <h2 id="updates-title">Update log</h2>
+          </div>
+          <span class="updates-count" id="updates-count"></span>
+        </div>
+        <div class="updates-list" id="updates-list" aria-live="polite"></div>
+      </section>
+    </div>
+
+    <button class="widget share-button" id="share-btn" type="button"><i class="fa-solid fa-share-nodes" aria-hidden="true"></i><span>Share page</span></button>
+    <div class="widget visit-counter" title="This number is stored locally in your browser"><i class="fa-solid fa-eye" aria-hidden="true"></i><span><strong id="view-count">0</strong> total visits</span></div>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
