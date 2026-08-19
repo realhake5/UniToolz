@@ -61,7 +61,7 @@ const libraryItems = [
   ["skyflix", "Watch", "High-quality video streaming platform.", "Visit site", "https://skyflix.to/"],
   ["cinejoy", "Watch", "High-quality video streaming platform.", "Visit site", "https://cinejoy.to/"],
   ["rd9sports", "Sports", "Watch live sports events and highlights.", "Visit site", "https://rd9sports.com/"],
-  ["AniWave", "Watch", "watch anime and stuff idk", "Visit Site", "https://aniwave.ru/home"],
+  ["AniWave", "Watch", "watch anime and stuff idk", "Visit Site", "https://aniwaves.ru/home"],
   
 ].map(([title, type, description, buttonText, link]) => ({ title, type, description, buttonText, link }));
 
